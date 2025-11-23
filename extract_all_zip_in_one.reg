@@ -1,0 +1,8 @@
+﻿Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.zip\shell\ExtractAllToFolder]
+@="すべての ZIP を同じフォルダに展開"
+"Icon"="C:\\Windows\\System32\\shell32.dll,70"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.zip\shell\ExtractAllToFolder\command]
+@="powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"$zip='%1'; $base=Split-Path $zip -Parent; $dest=Join-Path $base 'AllExtracted'; if(-not (Test-Path $dest)){New-Item -ItemType Directory -Path $dest | Out-Null}; Get-ChildItem -Path $base -Filter *.zip | ForEach-Object { Expand-Archive -Path $_.FullName -DestinationPath $dest -Force }\""
