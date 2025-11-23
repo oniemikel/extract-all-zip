@@ -1,7 +1,7 @@
 ﻿Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\SystemFileAssociations\.zip\shell\ExtractSingleZip]
-@="この ZIP をフォルダに展開"
+@="この ZIP を個々のフォルダに展開"
 "Icon"="C:\\Windows\\System32\\shell32.dll,70"
 
 [HKEY_CLASSES_ROOT\SystemFileAssociations\.zip\shell\ExtractSingleZip\command]
